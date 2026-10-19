@@ -1,0 +1,113 @@
+{
+  "model_id": "loanlens_logreg_v1",
+  "version": "1.0.0",
+  "artifact_path": "best_risk_model.joblib",
+  "sha256": "9769a445f791becd60f49dfcdfe1d1dd760b6e426321952c7452d0ec69aa34ae",
+  "size_bytes": 384426,
+  "algorithm": "Logistic Regression",
+  "syllabus_status": "Approved University Syllabus Algorithm",
+  "status": "Production",
+  "quality_gate": {
+    "model_name": "Logistic Regression",
+    "quality_gate_status": "PASSED",
+    "cv_macro_f1": 0.7629,
+    "threshold_macro_f1": 0.6,
+    "cv_risky_recall": 0.8211,
+    "threshold_risky_recall": 0.5,
+    "baseline_macro_f1": 0.2848,
+    "checks": {
+      "macro_f1_above_baseline": true,
+      "macro_f1_above_threshold": true,
+      "risky_recall_above_threshold": true
+    }
+  },
+  "cv_macro_f1": 0.7629,
+  "cv_risky_recall": 0.8211,
+  "metrics_test": {
+    "accuracy": 0.822,
+    "macro_precision": 0.6879,
+    "macro_recall": 0.7801,
+    "macro_f1": 0.7249,
+    "per_class": {
+      "Normal": {
+        "precision": 0.918,
+        "recall": 0.8542,
+        "f1": 0.8849,
+        "support": 2620
+      },
+      "Needs Review": {
+        "precision": 0.5809,
+        "recall": 0.666,
+        "f1": 0.6206,
+        "support": 539
+      },
+      "Risky": {
+        "precision": 0.565,
+        "recall": 0.8202,
+        "f1": 0.6691,
+        "support": 228
+      }
+    },
+    "confusion_matrix": [
+      [
+        2238,
+        251,
+        131
+      ],
+      [
+        167,
+        359,
+        13
+      ],
+      [
+        33,
+        8,
+        187
+      ]
+    ]
+  },
+  "loan_benchmark_metrics": {
+    "accuracy": 0.5385,
+    "macro_precision": 0.5524,
+    "macro_recall": 0.5303,
+    "macro_f1": 0.5012,
+    "per_class": {
+      "Normal": {
+        "precision": 0.5714,
+        "recall": 0.7273,
+        "f1": 0.64,
+        "support": 11
+      },
+      "Needs Review": {
+        "precision": 0.2857,
+        "recall": 0.5,
+        "f1": 0.3636,
+        "support": 4
+      },
+      "Risky": {
+        "precision": 0.8,
+        "recall": 0.3636,
+        "f1": 0.5,
+        "support": 11
+      }
+    },
+    "confusion_matrix": [
+      [
+        8,
+        3,
+        0
+      ],
+      [
+        1,
+        2,
+        1
+      ],
+      [
+        5,
+        2,
+        4
+      ]
+    ]
+  },
+  "timestamp": "2026-10-19T15:15:24Z"
+}

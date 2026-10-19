@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-10-19T12:50:55.308187+00:00",
+  "disclaimer": "LoanLens is an awareness and screening aid, not legal advice.",
+  "datasets": {
+    "claudette": {
+      "source_name": "CLAUDETTE Terms of Service Corpus",
+      "original_url": "http://claudette.eui.eu/ToS.zip",
+      "version": "1.0 (50 Online Terms of Service)",
+      "download_metadata": {
+        "url": "http://claudette.eui.eu/ToS.zip",
+        "saved_to": "raw\\claudette\\ToS.zip",
+        "size_bytes": 2329452,
+        "sha256": "14a7f96b0ac1ec86c4b97ac9db8b3d54c53ee9eae9248993e02881a354ba0bff",
+        "download_timestamp_utc": "2026-10-19T12:50:57.577971+00:00"
+      },
+      "license": "Creative Commons Attribution 4.0 International (CC-BY 4.0)",
+      "publisher": "European University Institute (EUI)",
+      "annotation_provenance": "Sentence-level human legal expert annotations on unfair clauses",
+      "limitations": "Pertains to consumer Terms of Service under EU consumer law, not directly Indian loan agreements. Serves as reference dataset for clause unfairness patterns."
+    },
+    "cuad": {
+      "source_name": "CUAD (Contract Understanding Atticus Dataset)",
+      "original_url": "https://raw.githubusercontent.com/The-Atticus-Project/cuad/main/data.zip",
+      "version": "v1",
+      "download_metadata": [
+        {
+          "url": "https://raw.githubusercontent.com/The-Atticus-Project/cuad/main/data.zip",
+          "saved_to": "raw\\cuad\\data.zip",
+          "size_bytes": 18309308,
+          "sha256": "f8161d18bea4e9c05e78fa6dda61c19c846fb8087ea969c172753bc2f45b999a",
+          "download_timestamp_utc": "2026-10-19T12:51:01.044520+00:00"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/The-Atticus-Project/cuad/main/category_descriptions.csv",
+          "saved_to": "raw\\cuad\\category_descriptions.csv",
+          "size_bytes": 8987,
+          "sha256": "7499950ee04d2ed2841c0f8ec2ef96b91be039bc2ea3c4edcc36334a465b1f36",
+          "download_timestamp_utc": "2026-10-19T12:51:01.460794+00:00"
+        }
+      ],
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+      "publisher": "The Atticus Project",
+      "annotation_provenance": "Expert attorney annotations across 41 contract clause categories",
+      "limitations": "Comprises commercial contracts from US SEC filings. Span annotations identify clause types rather than borrower risk ratings directly."
+    }
+  }
+}

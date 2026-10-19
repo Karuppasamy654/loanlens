@@ -1,0 +1,54 @@
+stages:
+  ingest:
+    cmd: python ml-service/data/ingest.py
+    deps:
+      - ml-service/data/ingest.py
+    outs:
+      - ml-service/data/dataset_provenance.json
+
+  prepare:
+    cmd: python ml-service/data/prepare.py
+    deps:
+      - ml-service/data/prepare.py
+      - ml-service/data/raw/claudette/extracted/ToS
+      - ml-service/data/raw/cuad/extracted/CUADv1.json
+    outs:
+      - ml-service/data/processed/combined_clauses.json
+      - ml-service/data/processed/loan_clauses.json
+      - ml-service/data/processed/dataset_summary.json
+
+  validate:
+    cmd: python ml-service/data/validate.py
+    deps:
+      - ml-service/data/validate.py
+      - ml-service/data/processed/combined_clauses.json
+      - ml-service/data/processed/loan_clauses.json
+
+  train:
+    cmd: python ml-service/training/train.py
+    deps:
+      - ml-service/training/train.py
+      - ml-service/features/tfidf_pipeline.py
+      - ml-service/data/processed/combined_clauses.json
+    outs:
+      - ml-service/models/evaluation_results.json
+      - ml-service/models/split_manifest.json
+      - ml-service/models/test_predictions.json
+      - ml-service/models/error_analysis.json
+      - ml-service/models/bootstrap_confidence_intervals.json
+
+  select_model:
+    cmd: python ml-service/training/select_model.py
+    deps:
+      - ml-service/training/select_model.py
+      - ml-service/quality/quality_gate.py
+      - ml-service/models/evaluation_results.json
+    outs:
+      - ml-service/models/best_risk_model.joblib
+      - ml-service/models/model_version.json
+
+  evaluate_tests:
+    cmd: python -m pytest ml-service/tests/test_ml_pipeline.py -v
+    deps:
+      - ml-service/tests/test_ml_pipeline.py
+      - ml-service/models/best_risk_model.joblib

@@ -1,0 +1,43 @@
+{
+  "timestamp": "LoanLens Combined Real Benchmark (CLAUDETTE + CUAD + Loan agreements)",
+  "sample_size": 3,
+  "population_stability_index": 3.8139,
+  "drift_status": "SIGNIFICANT_DRIFT",
+  "reference_frequencies": {
+    "prepayment": 0.0002,
+    "penalty": 0.003,
+    "foreclosure": 0.0001,
+    "interest": 0.0365,
+    "emi": 0.0212,
+    "unilateral": 0.0005,
+    "discretion": 0.0222,
+    "default": 0.0061,
+    "arbitrator": 0.0058,
+    "fee": 0.0437,
+    "notice": 0.0961,
+    "lien": 0.0124,
+    "repossess": 0.0001,
+    "apr": 0.0016,
+    "rate": 0.0727,
+    "dispute": 0.0215
+  },
+  "observed_frequencies": {
+    "prepayment": 0.3333,
+    "penalty": 0.3333,
+    "foreclosure": 0.0,
+    "interest": 0.3333,
+    "emi": 0.0,
+    "unilateral": 0.3333,
+    "discretion": 0.3333,
+    "default": 0.0,
+    "arbitrator": 0.0,
+    "fee": 0.0,
+    "notice": 0.3333,
+    "lien": 0.0,
+    "repossess": 0.0,
+    "apr": 0.0,
+    "rate": 0.6667,
+    "dispute": 0.0
+  },
+  "disclaimer": "Data drift indicates vocabulary distribution differences between reference corpus and current documents; it does not alone establish model inaccuracy."
+}

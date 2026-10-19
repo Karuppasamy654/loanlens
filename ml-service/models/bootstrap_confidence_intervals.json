@@ -1,0 +1,57 @@
+{
+  "Majority Baseline": {
+    "macro_f1_95ci": [
+      0.2805,
+      0.2996
+    ],
+    "risky_recall_95ci": [
+      0.0,
+      0.0
+    ],
+    "resampling_strategy": "Document-level cluster bootstrap (200 resamples)"
+  },
+  "Logistic Regression": {
+    "macro_f1_95ci": [
+      0.6796,
+      0.7741
+    ],
+    "risky_recall_95ci": [
+      0.7547,
+      0.8788
+    ],
+    "resampling_strategy": "Document-level cluster bootstrap (200 resamples)"
+  },
+  "Support Vector Machine": {
+    "macro_f1_95ci": [
+      0.7121,
+      0.7849
+    ],
+    "risky_recall_95ci": [
+      0.5413,
+      0.6668
+    ],
+    "resampling_strategy": "Document-level cluster bootstrap (200 resamples)"
+  },
+  "CART Decision Tree": {
+    "macro_f1_95ci": [
+      0.622,
+      0.6944
+    ],
+    "risky_recall_95ci": [
+      0.5831,
+      0.705
+    ],
+    "resampling_strategy": "Document-level cluster bootstrap (200 resamples)"
+  },
+  "Multinomial Naive Bayes": {
+    "macro_f1_95ci": [
+      0.6938,
+      0.7643
+    ],
+    "risky_recall_95ci": [
+      0.5976,
+      0.7396
+    ],
+    "resampling_strategy": "Document-level cluster bootstrap (200 resamples)"
+  }
+}

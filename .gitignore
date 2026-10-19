@@ -1,0 +1,47 @@
+# Environments
+.env
+.env.local
+.env.production
+*.env
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# MLflow and DVC
+mlruns/
+.dvc/cache/
+.dvc/tmp/
+mlflow.db
+
+# Storage / uploads
+server/uploads/
+server/temp/
+server/data/
+*.pdf
+
+# Testing & logs
+.pytest_cache/
+coverage/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Downloaded and processed ML datasets
+ml-service/data/raw/
+ml-service/data/processed/
